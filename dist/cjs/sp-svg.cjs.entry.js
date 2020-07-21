@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const index = require('./index-25639bf7.js');
+const index = require('./index-35c69b72.js');
 
 const spSvgCss = ":host{display:block}";
 
@@ -13,6 +13,10 @@ const SpSvg = class {
          * Path to svg file
          */
         this.src = null;
+        /**
+         * Sets width to 100% and height auto
+         */
+        this.responsive = false;
         /**
          * CSS classes placed into svg element
          */
@@ -38,7 +42,11 @@ const SpSvg = class {
         const parser = new DOMParser();
         const doc = parser.parseFromString(svgString.trim(), 'image/svg+xml');
         const svgElement = doc.querySelector('svg');
-        if (this.svgClass && this.svgClass.length) {
+        if (this.responsive) {
+            svgElement.style.width = '100%';
+            svgElement.style.height = 'auto';
+        }
+        if (this.svgClass) {
             svgElement.classList.add(this.svgClass);
         }
         this.hostElement.shadowRoot.append(svgElement);

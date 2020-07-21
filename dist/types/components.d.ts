@@ -8,6 +8,10 @@ import { HTMLStencilElement, JSXBase } from "./stencil-public-runtime";
 export namespace Components {
     interface SpSvg {
         /**
+          * Sets width to 100% and height auto
+         */
+        "responsive": boolean;
+        /**
           * Path to svg file
          */
         "src": string;
@@ -30,6 +34,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface SpSvg {
+        /**
+          * Sets width to 100% and height auto
+         */
+        "responsive"?: boolean;
         /**
           * Path to svg file
          */

@@ -34,7 +34,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-import { r as registerInstance, h, g as getElement, H as Host } from './index-bd578422.js';
+import { r as registerInstance, h, g as getElement, H as Host } from './index-edd4240d.js';
 var spSvgCss = ":host{display:block}";
 var SpSvg = /** @class */ (function () {
     function class_1(hostRef) {
@@ -43,6 +43,10 @@ var SpSvg = /** @class */ (function () {
          * Path to svg file
          */
         this.src = null;
+        /**
+         * Sets width to 100% and height auto
+         */
+        this.responsive = false;
         /**
          * CSS classes placed into svg element
          */
@@ -93,7 +97,11 @@ var SpSvg = /** @class */ (function () {
         var parser = new DOMParser();
         var doc = parser.parseFromString(svgString.trim(), 'image/svg+xml');
         var svgElement = doc.querySelector('svg');
-        if (this.svgClass && this.svgClass.length) {
+        if (this.responsive) {
+            svgElement.style.width = '100%';
+            svgElement.style.height = 'auto';
+        }
+        if (this.svgClass) {
             svgElement.classList.add(this.svgClass);
         }
         this.hostElement.shadowRoot.append(svgElement);

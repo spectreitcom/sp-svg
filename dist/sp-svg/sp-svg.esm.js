@@ -1,1 +1,1 @@
-import{p as s,b as a}from"./p-24e79453.js";s().then(s=>a([["p-08051a32",[[1,"sp-svg",{src:[1],svgClass:[1,"svg-class"]}]]]],s));
+import{p as s,b as p}from"./p-ff63b68f.js";s().then(s=>p([["p-a71d8218",[[1,"sp-svg",{src:[1],responsive:[4],svgClass:[1,"svg-class"]}]]]],s));
