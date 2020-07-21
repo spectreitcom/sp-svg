@@ -13,6 +13,11 @@ export class SpSvg implements ComponentInterface, ComponentDidLoad {
   @Prop() src: string = null;
 
   /**
+   * Sets width to 100% and height auto
+   */
+  @Prop() responsive = false;
+
+  /**
    * CSS classes placed into svg element
    */
   @Prop() svgClass: string = null;
@@ -45,7 +50,12 @@ export class SpSvg implements ComponentInterface, ComponentDidLoad {
     const doc = parser.parseFromString(svgString.trim(), 'image/svg+xml');
     const svgElement = doc.querySelector('svg');
 
-    if (this.svgClass && this.svgClass.length) {
+    if (this.responsive) {
+      svgElement.style.width = '100%';
+      svgElement.style.height = 'auto';
+    }
+
+    if (this.svgClass) {
       svgElement.classList.add(this.svgClass);
     }
 
