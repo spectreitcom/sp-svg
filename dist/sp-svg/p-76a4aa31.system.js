@@ -1,0 +1,1 @@
+System.register(["./p-bdb6be68.system.js"],(function(){"use strict";var s,e;return{setters:[function(t){s=t.p;e=t.b}],execute:function(){s().then((function(s){return e([["p-e860f436.system",[[1,"sp-svg",{src:[1],svgClass:[1,"svg-class"]}]]]],s)}))}}}));
