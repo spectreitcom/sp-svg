@@ -60,7 +60,8 @@ export class SpSvg implements ComponentInterface, ComponentDidLoad {
       svgElement.classList.add(this.svgClass);
     }
 
-    this.hostElement.shadowRoot.append(svgElement);
+    // this.hostElement.shadowRoot.append(svgElement);
+    this.hostElement.append(svgElement);
   }
 
 }

@@ -1,4 +1,4 @@
-import { r as registerInstance, h, H as Host, g as getElement } from './index-39d3edeb.js';
+import { r as registerInstance, h, g as getElement, H as Host } from './index-71c1cc3b.js';
 
 const spSvgCss = ":host{display:block}";
 
