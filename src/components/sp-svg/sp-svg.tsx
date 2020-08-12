@@ -3,7 +3,8 @@ import {Component, ComponentInterface, Host, Prop, ComponentDidLoad, h, Element}
 @Component({
   tag: 'sp-svg',
   styleUrl: 'sp-svg.css',
-  shadow: true,
+  shadow: false,
+  scoped: false
 })
 export class SpSvg implements ComponentInterface, ComponentDidLoad {
 
