@@ -104,7 +104,8 @@ var SpSvg = /** @class */ (function () {
         if (this.svgClass) {
             svgElement.classList.add(this.svgClass);
         }
-        this.hostElement.shadowRoot.append(svgElement);
+        // this.hostElement.shadowRoot.append(svgElement);
+        this.hostElement.append(svgElement);
     };
     Object.defineProperty(class_1.prototype, "hostElement", {
         get: function () { return getElement(this); },

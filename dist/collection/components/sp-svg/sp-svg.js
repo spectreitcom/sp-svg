@@ -41,7 +41,8 @@ export class SpSvg {
         if (this.svgClass) {
             svgElement.classList.add(this.svgClass);
         }
-        this.hostElement.shadowRoot.append(svgElement);
+        // this.hostElement.shadowRoot.append(svgElement);
+        this.hostElement.append(svgElement);
     }
     static get is() { return "sp-svg"; }
     static get originalStyleUrls() { return {
