@@ -49,7 +49,8 @@ const SpSvg = class {
         if (this.svgClass) {
             svgElement.classList.add(this.svgClass);
         }
-        this.hostElement.shadowRoot.append(svgElement);
+        // this.hostElement.shadowRoot.append(svgElement);
+        this.hostElement.append(svgElement);
     }
     get hostElement() { return index.getElement(this); }
 };
